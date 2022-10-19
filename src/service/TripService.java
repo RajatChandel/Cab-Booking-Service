@@ -73,8 +73,9 @@ public class TripService implements ITripsService {
     }
 
     @Override
-    public boolean completeTrip(String tripId) {
-        return changeTripStatus(tripId, TripStatus.COMPLETED);
+    public Double completeTripAndDisplayPrice(String tripId) {
+         changeTripStatus(tripId, TripStatus.COMPLETED);
+         return calculateTripPrice(tripId);
     }
 
 

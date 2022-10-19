@@ -84,10 +84,10 @@ public class Client {
         System.out.println("***********************************************************");
         //user selects driver with id 1
         String tripId = tripService.chooseDriver(user.getId(), availableDrivers.get(1).getId(), user.getLocation(), new Location(20,32));
-        tripService.completeTrip(tripId);
+        Double tripPrice = tripService.completeTripAndDisplayPrice(tripId);
 
         //trip price is calculated and displayed
-        Double tripPrice = tripService.calculateTripPrice(tripId);
+
         System.out.println("Total cost of Trip = " +tripPrice);
 
         System.out.println("***********************************************************");

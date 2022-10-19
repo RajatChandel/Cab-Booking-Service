@@ -18,7 +18,7 @@ public interface ITripsService {
 
     boolean startTrip(String id);
 
-    boolean completeTrip(String id);
+    Double completeTripAndDisplayPrice(String id);
 
 
 }
